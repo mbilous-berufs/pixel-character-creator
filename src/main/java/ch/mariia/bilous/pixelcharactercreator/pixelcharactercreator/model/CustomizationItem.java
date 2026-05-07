@@ -26,6 +26,9 @@ public class CustomizationItem {
     @Column(nullable = false)
     private String imagePath;
 
+    @Column(nullable = false)
+    private boolean active = true;
+
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
     public String getName() { return name; }
@@ -34,4 +37,6 @@ public class CustomizationItem {
     public void setType(CustomizationType type) { this.type = type; }
     public String getImagePath() { return imagePath; }
     public void setImagePath(String imagePath) { this.imagePath = imagePath; }
+    public boolean isActive() { return active; }
+    public void setActive(boolean active) { this.active = active; }
 }
