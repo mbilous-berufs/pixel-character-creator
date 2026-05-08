@@ -20,10 +20,16 @@ public class ColorOption {
     @Column(nullable = false)
     private String hexCode;
 
+    @NotBlank
+    @Column(nullable = false)
+    private String category;
+
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
     public String getName() { return name; }
     public void setName(String name) { this.name = name; }
     public String getHexCode() { return hexCode; }
     public void setHexCode(String hexCode) { this.hexCode = hexCode; }
+    public String getCategory() { return category; }
+    public void setCategory(String category) { this.category = category; }
 }
