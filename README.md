@@ -28,12 +28,19 @@ role_user
 role_admin
 ```
 
-4. Check `src/main/resources/application.yml`.
+4. Check `src/main/resources/application.yml` and adjust correct data: postgres username & password, ports.
 
 5. Run:
 
 ```bash
 mvn spring-boot:run
+```
+
+In case the JavaVersion Error occurs -> delete target folder and then run:
+```bash
+export JAVA_HOME=$(/usr/libexec/java_home -v 26)
+export PATH=$JAVA_HOME/bin:$PATH
+mvn clean spring-boot:run
 ```
 
 Swagger UI:
